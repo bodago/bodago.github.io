@@ -1,0 +1,847 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clearfix: before,
+.clearfix: after {
+    content: " ";
+    display: table;
+}
+.clearfix: after {clear: both;}
+.left {float: left;}
+.right {float: right;}
+
+/* Italic */
+@font-face {
+    font-family: 'League Gothic Italic';
+    src: url('../fonts/LeagueGothic-Italic/leaguegothic-italic-webfont.eot');
+    src: url('../fonts/LeagueGothic-Italic/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/LeagueGothic-Italic/leaguegothic-italic-webfont.woff') format('woff'),
+    url('../fonts/LeagueGothic-Italic/leaguegothic-italic-webfont.ttf') format('truetype'),
+    url('../fonts/LeagueGothic-Italic/leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+/* Regular */
+@font-face {
+    font-family: 'League Gothic Regular';
+    src: url('../fonts/LeagueGothic-Regular/leaguegothic-regular-webfont.eot');
+    src: url('../fonts/LeagueGothic-Regular/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/LeagueGothic-Regular/leaguegothic-regular-webfont.woff') format('woff'),
+    url('../fonts/LeagueGothic-Regular/leaguegothic-regular-webfont.ttf') format('truetype'),
+    url('../fonts/LeagueGothic-Regular/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+body {
+    background: #ffffff;
+}
+#wrapper {
+    margin: 0 auto;
+    width: 1024px;
+}
+/*==================================================
+ * HEADER
+ * ===============================================*/
+#header {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+h2 {
+    font-family: 'League Gothic Regular';
+    font-size: 22px;
+    color: #076e9f;
+}
+h3 {
+    font-family: 'League Gothic Regular';
+    font-size: 32px;
+    color: #076e9f;
+}
+h5 {
+    font-size: 10px;
+    color: #5c5c5c;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 2;
+}
+h6 {
+     font-family: Arial;
+     font-style: normal;
+     font-size: 10px;
+     color: #076e9f;
+     font-weight: bold;
+ }
+.logo{
+    text-align: center;
+    padding-top: 17px;
+}
+.logo a{
+    font-family: 'League Gothic Regular';
+    font-size: 26px;
+    color: rgb(7, 110, 159);
+    outline: 0;
+    text-decoration: none
+}
+.logo span {
+    color: rgb(34, 170, 236);
+}
+.social {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+.social a {
+    display: inline-block;
+    width: 23px;
+    height: 17px;
+}
+.social a:last-child{
+    width: 16px;
+}
+.icon1 {
+    background: url(../images/social-icons.png);
+}
+.icon2 {
+    background: url(../images/social-icons.png);
+    background-position: -23px 0;
+}
+.icon3 {
+    background: url(../images/social-icons.png);
+    background-position: -46px 0;
+}
+.icon4 {
+    background: url(../images/social-icons.png);
+    background-position: -69px 0;
+}
+.icon5 {
+    background: url(../images/social-icons.png);
+    background-position: -92px 0;
+}
+.icon6 {
+    background: url(../images/social-icons.png);
+    background-position: -115px 0;
+}
+.inform {
+    position: relative;
+}
+.nav {
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    float: left;
+    left: 50%;
+}
+.nav>li {
+    float: left;
+    margin-right: 35px;
+    color: rgb(112, 112, 112);
+    position: relative;
+    right: 50%;
+}
+.nav>li>a:hover {
+    background-color: #076e9f;
+    box-shadow: inset -1px 1px 1px 0 rgba(254, 255, 249, 0.56);
+    outline: 1px rgba(4, 82, 121, 0.55);
+    outline-offset: 1px;
+    color: white;
+}
+.nav>li>a {
+    display: block;
+    position: relative;
+    color: rgb(112, 112, 112);
+    font-size: 10px;
+    text-decoration: none;
+    padding: 6px 16px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: bold;
+}
+.nav li:last-child {margin-right: 0;}
+#main-image {
+    height: 435px;
+    margin-top: 45px;
+    border-top: 3px solid #22aaec;
+    border-bottom: 3px solid #22aaec;
+    position: relative;
+    background: white url(../images/home.jpg) no-repeat center bottom;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+.home {
+    border: 3px #22aaec;
+    padding-top: 90px;
+    text-align: center;
+}
+.home>h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'League Gothic Regular';
+    color: rgb(7, 110, 159);
+    background: rgba(254, 253, 255, 0.71);
+    display: inline-block;
+    padding: 12px 30px 8px 30px;
+}
+.home>h1>span {
+    color: rgb(34, 170, 236);
+}
+.home>h3 {
+    display: inline-block;
+    padding: 12px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'League Gothic Regular';
+    color: rgb(7, 110, 159);
+    background: rgba(254, 253, 255, 0.71);
+    margin: 15px;
+}
+.home>h3>span {
+    color: rgb(34, 170, 236);
+}
+.people {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 1024px;
+    background-color: rgba(0,0,0,0.51);
+    bottom: 0;
+    position: absolute;
+}
+.people>div {
+    display: inline-block;
+    position: relative;
+    width: 155px;
+    height: 69px;
+    background: rgba(254, 253, 255, 0.9);
+    margin: 0 30px 0px 50px;
+}
+.people>div>p {
+    font-size: 9px;
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: bold;
+    color: #828282;
+    line-height: 1.5;
+    padding: 10px 5px 5px 45px;
+    position: absolute;
+}
+.people>div>p+p {
+    font-size: 9px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 52px;
+    position: relative;
+}
+.people1>span {
+    position: absolute;
+    display: block;
+    left: -35px;
+    top: -1px;
+    color: red;
+    background: url(../images/person1.png);
+    width: 72px;
+    height: 70px;
+}
+.people2>span {
+    position: absolute;
+    display: block;
+    left: -35px;
+    color: red;
+    background: url(../images/person2.png);
+    width: 72px;
+    height: 70px;
+}
+.people3>span {
+    position: absolute;
+    display: block;
+    left: -35px;
+    color: red;
+    background: url(../images/person3.png);
+    width: 72px;
+    height: 70px;
+}
+.people4>span {
+    position: absolute;
+    display: block;
+    left: -35px;
+    color: red;
+    background: url(../images/person4.png);
+    width: 72px;
+    height: 70px;
+}
+/*==================================================
+ * Left-column
+ * ===============================================*/
+.left-column {
+    width: 200px;
+    float: left;
+}
+.left-column>div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #d5d5d5;
+    border-right-width: 1px;
+    border-right-style: dotted;
+    border-right-color: #d5d5d5;
+}
+.left-column p {
+    color: #0876a6;
+    text-align: left;
+    font-family: 'League Gothic';
+    font-size: 22px;
+    padding-bottom: 6px;
+    padding-top: 15px;
+}
+.left-column p+p {
+    font-size: 10px;
+    color: #5c5c5c;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    line-height: 2;
+}
+.left-column span {
+    color: #076e9f;
+    font-weight: bold;
+}
+.left-column>div {
+    padding-top: 10px;
+}
+.aboutauthor {
+    padding-right: 25px;
+    padding-left: 5px;
+}
+.relatedposts {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+.relatedposts>div>p {
+    font-family: 'Arial';
+    font-weight: bold;
+    font-size: 10px;
+    color: #5c5c5c;
+    padding-left: 75px;
+    padding-top: 5px;
+}
+.relatedposts>div {
+    padding-top: 10px;
+}
+.relatedposts p:last-child {
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: normal;
+    padding-left: 90px;
+}
+.poznan>span {
+    position: absolute;
+    display: block;
+    left: 5px;
+    background: url(../images/left-column.png);
+    background-position: 1px 0;
+    width: 52px;
+    height: 44px;
+}
+.peopleto>span {
+    position: absolute;
+    display: block;
+    left: 5px;
+    background: url(../images/left-column.png);
+    background-position: 1px -50px;
+    width: 52px;
+    height: 44px;
+}
+.currency {
+    padding-left: 5px;
+}
+.visit>span {
+    position: absolute;
+    display: block;
+    left: 5px;
+    background: url(../images/left-column.png);
+    background-position: 1px -99px;
+    width: 52px;
+    height: 44px;
+}
+.icon7 {
+    position: absolute;
+    display: block;
+    background: url(../images/icon7.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    left: 70px;
+}
+table {
+    width: 160px;
+    height: 80px;
+    font-family: 'Arial';
+    font-style: normal;
+    border: 3px solid white;
+}
+th{
+    background: #076e9f;
+    color: #c7e9fa;
+    padding: 5px;
+    font-size: 10px;
+    border: 1px solid white;
+}
+td {
+    background: #c7e9fa;
+    color: #076e9f;
+    padding: 5px;
+    font-size: 10px;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid white;
+}
+.icon8 {
+    background: url(../images/icon8.png) no-repeat;
+    background-color: #c7e9fa;
+    background-position: 12px 5px;
+}
+.icon9 {
+    background: url(../images/icon8.png) no-repeat;;
+    background-position: 12px -15px;
+    background-color: #c7e9fa;
+}
+/*==================================================
+ * Info
+ * ===============================================*/
+#column {
+     width: 960px;
+     margin: 0 auto;
+     border-bottom-width: 1px;
+     padding-bottom: 35px;
+}
+.info {
+    float: right;
+    width: 755px;
+
+    margin-right: 5px;
+    margin-bottom: 30px;
+    top: -10px;
+    display: block;
+    position: relative;
+    border-top: 3px solid #22aaec;
+}
+.heading {
+    padding-left: 10px;
+    padding-bottom: 30px;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #d5d5d5;
+    padding-top: 30px;
+    border-right-width: 1px;
+    border-right-style: dotted;
+    border-right-color: #d5d5d5;
+    background: white;
+}
+.heading>p {
+    font-family: Arial;
+    font-size: 10px;
+    color: #5c5c5c;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 2;
+    padding-top: 14px;
+    padding-left: 140px;
+}
+.heading>span {
+    float: left;
+    margin-left: 5px;
+    margin-top: 18px;
+    width: 52px;
+    height: 50px;
+    background: url(../images/icon9.png) no-repeat;
+}
+.heading>span+span {
+    background: url(../images/icon9.png) no-repeat;
+    background-position: -62px 0;
+}
+.heading>span>p {
+    font-size: 8px;
+    padding-top: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 8px;
+    font-family: Arial;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+a.button24 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 10px;
+    margin-left: 140px;
+    margin-top: 30px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 6px 15px;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #045279 #000 #045279;
+    border-radius: 3px;
+    background: linear-gradient(#46a3c5, #045279) #045279;
+    transition: 0.2s;
+}
+a.button24:hover { background: linear-gradient(#4fbce0, #057cb7) #4fbce0; }
+a.button24:active { background: linear-gradient(#057cb7, #4fbce0) #057cb7; }
+.comments {
+    display: block;
+    float: right;
+    right: -5px;
+    width: 180px;
+    height: 23px;
+    background: #90d4f5;
+    font-family: Arial;
+    font-weight: normal;
+    font-size: 10px;
+    margin-top: 30px;
+    position: relative;
+}
+.comments>span {
+    float: left;
+    margin-left: 10px;
+    margin-right: 35px;
+    margin-top: 3px;
+    background: url(../images/icon10.png) no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.comments>span>p{
+    margin-top: 5px;
+    margin-left: 20px;
+    font-family: Arial;
+    font-weight: normal;
+    color: #076e9f;
+    font-size: 10px;
+    width: 90px;
+}
+.comments>span+span {
+    background: url(../images/icon10.png) no-repeat;
+    background-position: -75px 0;
+}
+.comments::after {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 174px; bottom: -6px; /* Положение треугольника */
+    border: 3px solid transparent;
+    border-top: 3px solid #1075a5; /* Добавляем треугольник */
+    border-left: 3px solid #1075a5;
+}
+.post {
+    display: block;
+    float: right;
+    width: 755px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+.post1 {
+    float: left;
+    width: 300px;
+    height: 215px;
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-right: 30px;
+    background-color: #eaeaea;
+    background-image: linear-gradient(transparent 85%, #f4f3f3 15%);
+    border-top-left-radius: 25px;
+    margin-left: 15px;
+    position: relative;
+}
+.post2 {
+    width: 300px;
+    height: 215px;
+    float: right;
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-right: 30px;
+    background-color: #eaeaea;
+    background-image: linear-gradient(transparent 85%, #f4f3f3 15%);
+    border-top-left-radius: 25px;
+    margin-left: 15px;
+    position: relative;
+}
+.post span {
+    font-family: Arial;
+    font-style: normal;
+    font-size: 10px;
+    color: #076e9f;
+    font-weight: bold;
+}
+.post1>p {
+    margin-top: 35px;
+}
+.post2>p {
+    margin-top: 10px;
+}
+.post2>h2 {
+    padding-right: 75px;
+}
+.post p {
+    font-size: 10px;
+    color: #5c5c5c;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    line-height: 2;
+}
+.post a {
+    font-family: Arial;
+    font-style: normal;
+    font-size: 10px;
+    color: #076e9f;
+    font-weight: bold;
+    outline: 0;
+    text-decoration: none
+}
+.post1 .likes {
+    margin-top: 50px;
+}
+.post2 .likes {
+    margin-top: 35px;
+}
+.likes {
+     float: right;
+     width: 20px;
+     height: 20px;
+     background: url(../images/icon11.png) no-repeat;
+     margin-right: 30px;
+     background-position: -45px 0;
+ }
+.likes+.likes{
+     float: right;
+     width: 20px;
+     height: 20px;
+     background: url(../images/icon11.png) no-repeat;
+ }
+.likes>h6 {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+/*==================================================
+ * Effect
+ * ===============================================*/
+.effect:before, .effect:after
+{
+    z-index: -2;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+.effect:after
+{
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+}
+/*==================================================
+ * Effect2
+ * ===============================================*/
+.effect2:before, .effect2:after
+{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 50%;
+    max-width: 400px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+.effect2:after
+{
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+    right: 10px;
+    left: auto;
+}
+.component {
+    float: right;
+    width: 740px;
+    margin-top: 30px;
+    background-color: #eaeaea;
+    position: relative;
+
+}
+.component>h5{
+    padding: 40px ;
+    text-align: center;
+    font-weight: bold;
+}
+#map {
+    height: 200px;
+    width: 100%;
+    scrollwheel: false
+}
+
+.map-header {
+
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+
+
+    margin-top: 30px;
+    border-top-width: 1px;
+    border-top-style: dotted;
+    border-top-color: #d5d5d5;
+
+
+
+    left: 0;
+    right: 0;
+    width: 960px;
+    clear: both;
+
+
+}
+/*==================================================
+ * Footer
+ * ===============================================*/
+#footer {
+    width: 960px;
+    margin: 0 auto;
+    display: block;
+
+}
+
+.logo2 {
+    padding: 20px;
+    border-bottom: 1px dotted #d5d5d5;
+
+}
+.logo2 span {
+    color: #22aaec;
+}
+.logo2 a {
+    font-family: 'League Gothic Regular';
+    font-size: 16px;
+    color: rgb(7, 110, 159);
+    outline: 0;
+    text-decoration: none
+
+
+
+
+}
+.nav2 {
+    text-align: center;
+    float: right;
+    display: block;
+}
+.nav2>li {
+    float: left;
+    margin-right: 35px;
+    color: rgb(112, 112, 112);
+    position: relative;
+}
+.nav2>li>a:hover {
+    color: #5c5c5c;
+}
+.nav2>li>a {
+    display: block;
+    position: relative;
+    color: rgb(186, 186, 186);
+    font-size: 10px;
+    text-decoration: none;
+    padding: 7px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: bold;
+}
+.nav2 li:last-child {margin-right: 0;}
+
+.done {
+    text-align: center;
+    padding: 15px;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    color: #787878;
+}
