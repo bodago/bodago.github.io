@@ -746,7 +746,6 @@ a.button24:active { background: linear-gradient(#057cb7, #4fbce0) #057cb7; }
     margin-top: 30px;
     background-color: #eaeaea;
     position: relative;
-
 }
 .component>h5{
     padding: 40px ;
@@ -758,28 +757,18 @@ a.button24:active { background: linear-gradient(#057cb7, #4fbce0) #057cb7; }
     width: 100%;
     scrollwheel: false
 }
-
 .map-header {
-
-
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 5px;
-
-
     margin-top: 30px;
     border-top-width: 1px;
     border-top-style: dotted;
     border-top-color: #d5d5d5;
-
-
-
     left: 0;
     right: 0;
     width: 960px;
     clear: both;
-
-
 }
 /*==================================================
  * Footer
@@ -788,13 +777,10 @@ a.button24:active { background: linear-gradient(#057cb7, #4fbce0) #057cb7; }
     width: 960px;
     margin: 0 auto;
     display: block;
-
 }
-
 .logo2 {
     padding: 20px;
     border-bottom: 1px dotted #d5d5d5;
-
 }
 .logo2 span {
     color: #22aaec;
@@ -805,10 +791,6 @@ a.button24:active { background: linear-gradient(#057cb7, #4fbce0) #057cb7; }
     color: rgb(7, 110, 159);
     outline: 0;
     text-decoration: none
-
-
-
-
 }
 .nav2 {
     text-align: center;
